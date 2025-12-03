@@ -1,0 +1,70 @@
+/build/
+############################
+# Eclipse / IDE
+############################
+.classpath
+.project
+.settings/
+.metadata/
+
+############################
+# Build / Output
+############################
+bin/
+build/
+target/
+dist/
+out/
+
+############################
+# Servers / Tomcat workspace
+############################
+Servers/
+wtpwebapps/
+**/.factorypath
+
+############################
+# OS-specific
+############################
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+############################
+# Logs / temp
+############################
+*.log
+*.tmp
+*.swp
+
+############################
+# Maven / Gradle (if any)
+############################
+.mvn/
+.mvnyml
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+.gradle/
+.gradle/
+build/
+
+############################
+# IntelliJ / VS Code (if ever opened there)
+############################
+.idea/
+*.iml
+.vscode/
+
+############################
+# Database / credentials (if any)
+############################
+*.properties
+*.env
+
