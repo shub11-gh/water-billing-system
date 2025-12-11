@@ -6,6 +6,13 @@
 <meta charset="UTF-8">
 <title>View Water Bill</title>
 <style>
+		body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            
         h2 {
             font-family: Georgia, 'Times New Roman', Times, serif;
         }
@@ -42,8 +49,12 @@
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-size: 1.1rem;
         }
+        
+        .search-container {
+                text-align: center;
+        }
 
-        .submit-container input {
+        .search-container input {
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-size: 1.3rem;
             padding: 4px 8px;
@@ -54,7 +65,7 @@
             color: white;
         }
 
-        .submit-container input:hover {
+        .search-container input:hover {
             background: #bb7204f1;
             cursor: pointer;
         }
@@ -103,7 +114,7 @@
             <input type="text" name="billYear" id="billYear" required>
         </div>
 
-        <div class="submit-container">
+        <div class="search-container">
             <input type="submit" value="Search">
         </div>
     </form>

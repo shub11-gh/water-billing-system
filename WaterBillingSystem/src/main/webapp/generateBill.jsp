@@ -1,136 +1,148 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Generate Water Bill</title>
-<style>
-        h2 {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+    <!DOCTYPE html>
+    <html>
 
-        .input-container {
-            margin: 20px auto;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <title>Generate Water Bill</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
 
-        .input-container input {
-            outline: none;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            border: 2px solid rgb(31, 30, 30);
-            padding: 6px;
-            border-radius: 4px;
-            font-size: 0.95rem;
-        }
+            h2 {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
 
-        .input-container select {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 0.95rem;
-            outline: none;
-            border: 2px solid rgb(31, 30, 30);
-            padding: 6px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+            .input-container {
+                margin: 20px auto;
+            }
 
-        .input-label {
-            display: inline-block;
-            width: 150px;
-        }
+            .input-container input {
+                outline: none;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                border: 2px solid rgb(31, 30, 30);
+                padding: 6px;
+                border-radius: 4px;
+                font-size: 0.95rem;
+            }
 
-        .input-label label {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            font-size: 1.1rem;
-        }
+            .input-container select {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 0.95rem;
+                outline: none;
+                border: 2px solid rgb(31, 30, 30);
+                padding: 6px;
+                border-radius: 4px;
+                cursor: pointer;
+            }
 
-        .submit-container input {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            font-size: 1.3rem;
-            padding: 4px 8px;
-            outline: none;
-            border: 1px solid rgb(31, 30, 30);
-            border-radius: 16px;
-            background: #129606;
-            color: white;
-        }
+            .input-label {
+                display: inline-block;
+                width: 180px;
+            }
 
-        .submit-container input:hover {
-            background: #129606ef;
-            cursor: pointer;
-        }
-    </style>
-</head>
+            .input-label label {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 1.1rem;
+            }
 
-<body>
-    <h2>Enter bill details:</h2>
+            .submit-container {
+                text-align: center;
+            }
 
-    <form class="generateBillForm" action="MainServlet" method="post">
-       <input type="hidden" name="operation" value="generate">
-    
-        <div class="input-container">
-            <div class="input-label">
-                <label for="consumerNum">Consumer Number</label>
+            .submit-container input {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 1.3rem;
+                padding: 4px 8px;
+                outline: none;
+                border: 1px solid rgb(31, 30, 30);
+                border-radius: 16px;
+                background: #129606;
+                color: white;
+            }
+
+            .submit-container input:hover {
+                background: #129606ef;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>Enter bill details:</h2>
+
+        <form class="generateBillForm" action="MainServlet" method="post">
+            <input type="hidden" name="operation" value="generate">
+
+            <div class="input-container">
+                <div class="input-label">
+                    <label for="consumerNum">Consumer Number</label>
+                </div>
+                <input type="text" name="consumerNum" id="consumerNum" required>
             </div>
-            <input type="text" name="consumerNum" id="consumerNum" required>
-        </div>
 
-        <div class="input-container">
-            <div class="input-label">
-                <label for="billMonth">Month</label>
+            <div class="input-container">
+                <div class="input-label">
+                    <label for="billMonth">Month</label>
+                </div>
+                <select name="billMonth" id="billMonth" required>
+                    <option value="SelectMonth">--Select Month--</option>
+                    <option value="Jan">Jan</option>
+                    <option value="Feb">Feb</option>
+                    <option value="Mar">Mar</option>
+                    <option value="Apr">Apr</option>
+                    <option value="May">May</option>
+                    <option value="Jun">Jun</option>
+                    <option value="Jul">Jul</option>
+                    <option value="Aug">Aug</option>
+                    <option value="Sep">Sep</option>
+                    <option value="Oct">Oct</option>
+                    <option value="Nov">Nov</option>
+                    <option value="Dec">Dec</option>
+                </select>
             </div>
-            <select name="billMonth" id="billMonth" required>
-                <option value="SelectMonth">--Select Month--</option>
-                <option value="Jan">Jan</option>
-                <option value="Feb">Feb</option>
-                <option value="Mar">Mar</option>
-                <option value="Apr">Apr</option>
-                <option value="May">May</option>
-                <option value="Jun">Jun</option>
-                <option value="Jul">Jul</option>
-                <option value="Aug">Aug</option>
-                <option value="Sep">Sep</option>
-                <option value="Oct">Oct</option>
-                <option value="Nov">Nov</option>
-                <option value="Dec">Dec</option>
-            </select>
-        </div>
 
-        <div class="input-container">
-            <div class="input-label">
-                <label for="billYear">Year</label>
+            <div class="input-container">
+                <div class="input-label">
+                    <label for="billYear">Year</label>
+                </div>
+                <input type="text" name="billYear" id="billYear" required>
             </div>
-            <input type="text" name="billYear" id="billYear" required>
-        </div>
 
-        <div class="input-container">
-            <div class="input-label">
-                <label for="startReading">Start Reading</label>
+            <div class="input-container">
+                <div class="input-label">
+                    <label for="startReading">Start Reading</label>
+                </div>
+                <input type="text" name="startReading" id="startReading" required>
             </div>
-            <input type="text" name="startReading" id="startReading" required>
-        </div>
 
-        <div class="input-container">
-            <div class="input-label">
-                <label for="currentReading">Current Reading</label>
+            <div class="input-container">
+                <div class="input-label">
+                    <label for="currentReading">Current Reading</label>
+                </div>
+                <input type="text" name="currentReading" id="currentReading" required>
             </div>
-            <input type="text" name="currentReading" id="currentReading" required>
-        </div>
 
-        <div class="input-container">
-            <div class="input-label">
-                <label for="connType">Connection Type</label>
+            <div class="input-container">
+                <div class="input-label">
+                    <label for="connType">Connection Type</label>
+                </div>
+                <select name="connType" id="connType" required>
+                    <option value="SelectType">--Select Type--</option>
+                    <option value="Domestic">Domestic</option>
+                    <option value="Industrial">Industrial</option>
+                </select>
             </div>
-            <select name="connType" id="connType" required>
-                <option value="SelectType">--Select Type--</option>
-                <option value="Domestic">Domestic</option>
-                <option value="Industrial">Industrial</option>
-            </select>
-        </div>
 
-        <div class="submit-container">
-            <input type="submit" value="Generate">
-        </div>
-    </form>
+            <div class="submit-container">
+                <input type="submit" value="Generate">
+            </div>
+        </form>
 
-</body>
-</html>
+    </body>
+
+    </html>
