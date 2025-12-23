@@ -19,37 +19,52 @@
         }
 
         .error {
-        display: flex;
+            display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
             background-color: rgb(255, 255, 255);
-            border-radius: 5px;
+            border-radius: 10px;
             color: rgb(201, 4, 4);
             font-family: "Elms Sans", sans-serif;
             padding: 30px;
-            width: 300px;
-            height: 150px;
-            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+            width: 378px;
+            height: 200px;
+            box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+            font-size: 1.8rem;
+
         }
 
         .error p {
             margin: 0px;
             font-size: 1.2rem;
         }
-        
-        .back-link a {
+
+        .nav-link {
             text-decoration: none;
-            color: rgb(255, 255, 255);
-            font-size: 1.2rem;
-            font-weight: 550;
+            font-size: 1.4rem;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
-        
-        .back-link{
-            margin-top:20px;
+
+        .nav-link #back,
+        #view {
+            color: rgb(238, 243, 239);
+            text-decoration: none;
+            margin: 10px 0;
         }
-        
+
+        .nav-link #back:hover {
+            text-decoration-line: underline;
+        }
+
+        .nav-link #view:hover {
+            text-decoration-line: underline;
+        }
     </style>
 </head>
 
@@ -60,9 +75,10 @@
         </h2>
         <p>Please check the entered bill details.</p>
     </div>
-    <div class="back-link">
-            <a href="menu.html">Back to Menu</a>
-        </div>
+    <div class="nav-link">
+        <a id="back" href="menu.html">Back to Menu</a>
+        <a id="view" href="viewBill.jsp">View Bill</a>
+    </div>
 </body>
 
 </html>

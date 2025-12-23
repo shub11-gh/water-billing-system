@@ -11,10 +11,24 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                height: 95vh;
             }
 
-            h2 {
-                font-family: Georgia, 'Times New Roman', Times, serif;
+            body::before {
+                content: "";
+                background-image: linear-gradient(to right, rgb(15, 100, 34), rgb(12, 72, 90));
+                opacity: 0.8	;
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                height: 100vh;
+                width: 100vw;
+            }
+
+            h1 {
+            	color: #ffffff;
+                font-family: Verdana, Geneva, Tahoma, sans-serif
             }
 
             .input-container {
@@ -24,30 +38,30 @@
             .input-container input {
                 outline: none;
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
-                border: 2px solid rgb(31, 30, 30);
-                padding: 6px;
-                border-radius: 4px;
-                font-size: 0.95rem;
+                border: 2px solid rgb(255, 251, 251);
+                padding: 5px;
+                border-radius: 20px;
+                font-size: 1.3rem;
             }
 
             .input-container select {
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
-                font-size: 0.95rem;
+                font-size: 1.3rem;
                 outline: none;
-                border: 2px solid rgb(31, 30, 30);
-                padding: 6px;
-                border-radius: 4px;
+                border: 2px solid rgb(255, 255, 255);
+                padding: 5px;
+                border-radius: 20px;
                 cursor: pointer;
             }
 
             .input-label {
                 display: inline-block;
-                width: 180px;
+                width: 250px;
             }
 
             .input-label label {
                 font-family: Georgia, 'Times New Roman', Times, serif;
-                font-size: 1.1rem;
+                font-size: 1.5rem;
             }
 
             .submit-container {
@@ -55,25 +69,27 @@
             }
 
             .submit-container input {
-                font-family: Georgia, 'Times New Roman', Times, serif;
-                font-size: 1.3rem;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 2rem;
                 padding: 4px 8px;
                 outline: none;
                 border: 1px solid rgb(31, 30, 30);
-                border-radius: 16px;
-                background: #129606;
+                border-radius: 30px;
+                background: #0c7402;
                 color: white;
+                transition: all 0.2s 0s ease-in-out;
             }
 
             .submit-container input:hover {
-                background: #129606ef;
+                transform: scale(1.05);
                 cursor: pointer;
             }
         </style>
     </head>
 
     <body>
-        <h2>Enter bill details:</h2>
+
+        <h1>Enter bill details:</h1>
 
         <form class="generateBillForm" action="MainServlet" method="post">
             <input type="hidden" name="operation" value="generate">

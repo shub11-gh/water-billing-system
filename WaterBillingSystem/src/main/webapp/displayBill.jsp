@@ -7,13 +7,28 @@
             <meta charset="UTF-8">
             <title>Water Bill Details</title>
             <style>
-                h2 {
+                body::before {
+                    content: "";
+                    height: 100%;
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                    opacity: 0.6;
+                    z-index: -1;
+                    position: absolute;
+                    background-image: linear-gradient(to right, rgb(235, 230, 227), rgb(214, 212, 208));
+                }
+
+                h1 {
                     font-family: Georgia, 'Times New Roman', Times, serif;
                 }
 
                 table {
                     border: 1px solid rgb(20, 20, 20);
                     background: rgb(20, 20, 20);
+                    font-family: serif;
+                    font-size: 1.5rem;
+                    letter-spacing: 2;
                 }
 
                 .bill-table {
@@ -30,43 +45,48 @@
 
                 .bill-table th {
                     color: rgb(255, 255, 255);
-                    background: #df7804ec;
+                    background: #e07b06ec;
                 }
 
                 .bill-table td {
-                    font-size: 1.1rem;
+                    font-size: 1.2rem;
                     padding: 6px;
                 }
 
-                .back-link a {
-                    text-decoration: none;
-                    color: rgb(0, 80, 133);
-                    font-size: 1.2rem;
-                }
-
                 .total-charges th {
-                    background-color: #3fd411;
+                    background-color: #207406;
                 }
 
 
                 .total-charges td {
-                    background-color: #b4eea3;
+                    background-color: #c1ffae;
                 }
 
-                .back-link {
+                .nav-link {
+                    text-decoration: none;
+                    font-size: 1.4rem;
                     margin-top: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
                 }
-                
-                .back-link a {
-            		font-size: 1.2rem;
-            		font-weight: 550;
-        		}
+
+                .nav-link #back {
+                    color: rgb(18, 19, 18);
+                    text-decoration: none;
+                    margin: 10px 0;
+                }
+
+                .nav-link #back:hover {
+                    text-decoration: underline;
+                }
 
                 .no-record p {
                     font-family: Georgia, 'Times New Roman', Times, serif;
-                    font-size: 1.5rem;
+                    font-size: 3rem;
                     font-weight: 500;
-                    color: #0509d4;
+                    color: #06098d;
                 }
             </style>
         </head>
@@ -79,7 +99,7 @@
                         <p>No matching records exists! Please try again!</p>
                     </div>
                     <% } else { %>
-                        <h2>Water Bill</h2>
+                        <h1>Water Bill</h1>
                         <table>
                             <tr>
                                 <th>
@@ -174,8 +194,8 @@
                         </table>
                         <% } %>
 
-                            <div class="back-link">
-                                <a href="menu.html">Back to Menu</a>
+                            <div class="nav-link">
+                                <a id="back" href="menu.html">Back to Menu</a>
                             </div>
             </div>
         </body>

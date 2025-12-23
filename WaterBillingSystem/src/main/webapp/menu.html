@@ -6,74 +6,111 @@
     <title>Water Billing System</title>
     <style>
         body {
-            background-blend-mode: color-burn;
-            background-image: linear-gradient(to right, rgb(146, 228, 146), rgb(59, 179, 179));
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 80vh;
-            width: 100vw;
+            height: 95vh;
+            background: url('assets/pexels-padrinan-255379.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         .container {
-            border-radius: 20px;
-            box-shadow: 5px 5px 10px rgb(65, 145, 82), -5px -5px 10px rgb(103, 141, 103);
-            padding: 30px 5px;
+            display: grid;
+            grid-template-columns: 2fr 1.5fr;
+            width: 950px;
+            height: 500px;
+            box-shadow: 6px 6px 2px 2px rgba(48, 49, 48, 0.192);
+        }
+
+        .choice-container {
+            background-color: transparent;
+            padding: 30px;
             padding-top: 5px;
-            width: 70vw;
-            background-color: #2e793e;
+            background-color: #fff;
+        }
+
+        .welcome-container {
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.95rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-image: linear-gradient(to right, rgb(11, 83, 83), rgb(26, 133, 26));
         }
 
         .main-heading {
-            color: rgb(43, 131, 8);
+            color: rgb(40, 129, 4);
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            background-color: #e6ece4;
-            font-family: "Roboto Slab", serif;
-            border-radius: 16px;
+            font-family: Times New Roman;
+            font-size: 1.2rem;
+            border-radius: 2px;
+            margin-top: 30px;
         }
 
         .secondary-heading {
+            margin-top: 20px;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 180px;
+            height: 250px;
             font-family: "Roboto Slab", serif;
-            font-size: 1.48rem;
+            font-size: 2em;
         }
 
-        a {
-            color: white;
+        .secondary-heading a {
+            color: black;
             text-decoration: none;
             margin: 0 30px;
             transition: all 0.135s ease-in-out 0s;
+            margin: 20px;
         }
 
-        a:hover {
+        .secondary-heading a:hover {
             cursor: pointer;
             transform: translateY(-5px);
+        }
+
+        #back-text {
+            display: block;
         }
     </style>
 </head>
 
 <body>
 
-
     <div class="container">
-        <div class="main-heading">
-            <h1>Water Billing System</h1>
+        <div class="welcome-container">
+            <div>
+                <h1>Welcome
+                    <span id="back-text">
+                        back!
+                    </span>
+                </h1>
+            </div>
         </div>
 
-        <div class="secondary-heading">
-            <a href="generateBill.jsp">Generate Water Bill</a>
-            <a href="viewBill.jsp">View Water Bill</a>
+        <div class="choice-container">
+            <div class="main-heading">
+                <h1>Water Billing System</h1>
+            </div>
+
+            <div class="secondary-heading">
+                <a href="generateBill.jsp">Generate Water Bill</a>
+                <a href="viewBill.jsp">View Water Bill</a>
+            </div>
         </div>
+
     </div>
-
 </body>
 
 </html>
