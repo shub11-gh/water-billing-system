@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@100;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+        	box-sizing: border-box;
+            background-color: rgba(199, 47, 47, 0.966);
+            display: flex;
+            flex-direction: column;
+            height: 80vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .error {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            color: rgb(201, 4, 4);
+            font-family: "Elms Sans", sans-serif;
+            padding: 30px;
+            width: 378px;
+            height: 200px;
+            box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+            font-size: 1.8rem;
+
+        }
+
+        .error p {
+            margin: 0px;
+            font-size: 1.2rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            font-size: 1.4rem;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .nav-link #back,
+        #view {
+            color: rgb(238, 243, 239);
+            text-decoration: none;
+            margin: 10px 0;
+        }
+
+        .nav-link #back:hover {
+            text-decoration-line: underline;
+        }
+
+        .nav-link #view:hover {
+            text-decoration-line: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="error">
+        <h2>
+            An Error Occured!
+        </h2>
+        <p>Please verify the entered bill details.</p>
+    </div>
+    <div class="nav-link">
+        <a id="back" href="menu.html">Back to Menu</a>
+        <a id="view" href="viewBill.jsp">View Bill</a>
+    </div>
+</body>
+
+</html>
