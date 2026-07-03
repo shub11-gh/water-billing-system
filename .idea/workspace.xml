@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2123d42-6234-44f0-acf0-37ef17736966" name="Changes" comment="initial commit" />
+    <list default="true" id="b2123d42-6234-44f0-acf0-37ef17736966" name="Changes" comment="update .env.sample" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,12 +24,12 @@
     &quot;assignee&quot;: &quot;shub11-gh&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/shub11-gh/water-billing-system.git&quot;,
-    &quot;accountId&quot;: &quot;caa238d7-a3fb-45e8-9671-4f28804a0b63&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/shub11-gh/water-billing-system.git",
+    "accountId": "e48e6ff4-2c35-4f6a-bba0-8279ff717dfc"
   }
-}</component>
+}]]></component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -127,7 +127,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783060231969</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update .env.sample">
+      <option name="closed" value="true" />
+      <created>1783060836222</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1783060836223</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,7 +154,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="update .env.sample" />
+    <option name="LAST_COMMIT_MESSAGE" value="update .env.sample" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
