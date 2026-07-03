@@ -2,11 +2,12 @@ package com.reva.water.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import io.github.cdimascio.dotenv.Dotenv;
 
 public class DBUtil {
-	private static String url = "jdbc:mysql://localhost:3306/water_billing_system";
-	private static String user = "root";
-	private static String password = "Shub@9611";
+	private static String url = dotenv.get("DB_URL");
+	private static String user = dotenv.get("DB_USER");
+	private static String password = dotenv.get("DB_PASSWORD");
 	
 	public static Connection getDBConnection(){
 		Connection conn=null;
